@@ -9,6 +9,7 @@ const navbar_link = document.getElementsByClassName('navbar-link')
 const icon = document.getElementsByClassName('search-icon')
 const search_icon = document.getElementById('searching-icon');
 const close_icon = document.getElementById('close-icon');
+const search_box = document.getElementById('searching-box');
 
 mobile_nav.addEventListener('click', function(){
     nav_header.classList.toggle("active");
@@ -51,6 +52,19 @@ header.addEventListener('mouseout', function() {
     for(let j = 0; j < icon.length; j++) {
         icon[j].style.color = "#FFFFFF";
         }
+})
+
+search_icon.addEventListener('click', function() {
+
+    search_box.style.display = "block"
+    close_icon.style.display = "block"
+
+})
+
+close_icon.addEventListener('click', function() {
+
+    search_box.style.display = "none"
+    close_icon.style.display = "none"
 })
 
 

@@ -144,11 +144,13 @@ a:hover:after{
 .search-div{
     position: absolute;
     right: 30rem;
+    display: flex;
 }
 
 .search-icon{
     font-size: 2rem;
     color: aliceblue;
+   
 }
 .search-icon[name="close"]{
     display: none;
