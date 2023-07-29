@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    padding: 0 1.8rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,.5); 
+}
+
+.header .logo{
+    width: 5rem;
+    margin-left: 10rem;
+}
+
+.navbar-list{
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+    margin-left: 10rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited{
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.mobile-nav-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.mobile-navbar-btn{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-nav-icon[name="close-outline"]{
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:62em){
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+        justify-content: start;
+        left:1.2rem;
+        position: absolute;
+    }
+
+    .header{
+        padding: 0;
+        justify-content: center;
+        position: relative;
+        
+    }
+
+    .header .logo{
+        margin-left: 0;
+    }
+
+    .navbar{
+        
+        width: 100%;
+        height: 100vh;
+        background: white;
+        position: absolute;
+        top:0;
+        left: 0;
+        display: flex;
+        justify-content: left;
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+    }
+
+    .navbar-list{
+        flex-direction: column;
+        margin-top:6rem;
+        margin-left: 2rem;
+    }
+
+    .navbar-link:link,
+    .navbar-link:visited{
+        color: rgb(0, 0, 0);
+    }
+
+    .active .navbar{
+        transform: translateX(0%);
+    }
+
+    .active .mobile-navbar-btn 
+    .mobile-nav-icon[name="close-outline"]{
+        display: block;
+
+    }
+
+    .active .mobile-navbar-btn 
+    .mobile-nav-icon[name="menu-outline"]{
+        display: none;
+
+    }
+
+
+
+}
