@@ -15,6 +15,7 @@ html {
     display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, .5);
+    transition: 0.3s;
 }
 
 .header .logo {
@@ -126,6 +127,10 @@ html {
 
 
 @media screen and (max-width:62em) {
+
+    hr{
+        width: 100%;
+    }
     .mobile-navbar-btn {
         display: block;
         z-index: 999;
@@ -186,6 +191,7 @@ html {
 
     .nav-drop-div {
         position: relative;
+        transition: 0.5s linear;
         
     }
 
