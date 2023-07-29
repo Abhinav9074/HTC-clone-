@@ -6,6 +6,9 @@ const products = document.getElementById('products');
 const nav_drop_div = document.querySelector('.nav-drop-div');
 const header = document.querySelector('.header');
 const navbar_link = document.getElementsByClassName('navbar-link')
+const icon = document.getElementsByClassName('search-icon')
+const search_icon = document.getElementById('searching-icon');
+const close_icon = document.getElementById('close-icon');
 
 mobile_nav.addEventListener('click', function(){
     nav_header.classList.toggle("active");
@@ -33,6 +36,10 @@ header.addEventListener('mouseover', function() {
     for(let i = 0; i < navbar_link.length; i++) {
     navbar_link[i].style.color = "#656565";
     }
+
+    for(let j = 0; j < icon.length; j++) {
+        icon[j].style.color = "#656565";
+        }
 })
 
 header.addEventListener('mouseout', function() {
@@ -40,6 +47,12 @@ header.addEventListener('mouseout', function() {
     for(let i = 0; i < navbar_link.length; i++) {
     navbar_link[i].style.color = "#FFFFFF";
     }
+
+    for(let j = 0; j < icon.length; j++) {
+        icon[j].style.color = "#FFFFFF";
+        }
 })
+
+
 
 });

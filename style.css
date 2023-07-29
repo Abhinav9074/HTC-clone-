@@ -137,6 +137,35 @@ a:hover:after{
     transition: all 0.3s;
 }
 
+.triangle-button{
+    float: right;
+}
+
+.search-div{
+    position: absolute;
+    right: 30rem;
+}
+
+.search-icon{
+    font-size: 2rem;
+    color: aliceblue;
+}
+.search-icon[name="close"]{
+    display: none;
+}
+.search-box{
+    border: none;
+    outline: none;
+    height: 3rem;
+    width: 12rem;
+    font-size: 1.7rem;
+    display: none;
+}
+
+
+
+
+
 
 
 
@@ -234,6 +263,10 @@ a:hover:after{
 
     .drop-details li h4{
         text-align: left;
+    }
+
+    .search-div{
+        right: 2rem;
     }
     
 
