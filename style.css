@@ -30,6 +30,20 @@ html {
     margin-left: 10rem;
 }
 
+.navbar-link:after{
+    content: "";
+    position: absolute;
+    height: 0.3rem;
+    width: 0%;
+    left: 0;
+    background-color: #4BD6B8;
+    bottom: -1.7rem;
+    transition: 0.3s;
+}
+a:hover:after{
+    width: 100%;;
+}
+
 .navbar-link:link,
 .navbar-link:visited {
     display: inline-block;
@@ -38,6 +52,7 @@ html {
     font-size: 1.4rem;
     font-weight: 500;
     color: rgb(255, 255, 255);
+    position: relative;
 }
 
 .mobile-nav-icon {
