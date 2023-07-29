@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header ">
+    <header class="header">
         <div class="mobile-navbar-btn">
             <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
             <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
@@ -24,12 +24,29 @@
         <img src="https://www.htc.com/static/app/htc_dist/public/fonts/htc-logo-w.svg" alt="htc" class="logo">
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a class="navbar-link" href="#">Products</a></li>
+                <li id="products"><a class="navbar-link" href="#">Products</a>
+                    <div class="nav-drop-div">
+                        <ul class="navbar-dropdown">
+                            <div class="drop-details">
+                                <li class="navbar-drop-link"><a href="#"><img src="icon/1.png" alt=""><h4>5G</h4></a></li>
+                                <li class="navbar-drop-link"><a href="#"><img src="icon/2.png" alt=""><h4>SMARTPHONES</h4></a></li>
+                                <li class="navbar-drop-link"><a href="#"><img src="icon/3.png" alt=""><h4>BLOCKCHAIN PHONE</h4></a></li>
+                                <li class="navbar-drop-link"><a href="#"><img src="icon/4.png" alt=""><h4>VIVE</h4></a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </li>
                 <li><a class="navbar-link" href="#">Viverse</a></li>
                 <li><a class="navbar-link" href="#">Apps</a></li>
                 <li><a class="navbar-link" href="#">Support</a></li>
             </ul>
         </nav>
+        <div class="search-btn">
+
+        </div>
+        <div class="triangle-button">
+            
+        </div>
     </header>
 
     <script src="script.js"></script>
