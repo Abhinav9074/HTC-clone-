@@ -9,13 +9,25 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+.wrapper{
+    padding: 0;
+    background-image: url("slides/1.jpeg");
+    width: 100%;
+    height: 70rem;
+}
+
 .header {
     padding: 0 10.8rem;
+    width: 100%;
     height: 5rem;
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, .5);
     transition: 0.3s;
+}
+
+.navbar{
+    width: 100%;
 }
 
 .header .logo {
@@ -39,7 +51,7 @@ html {
     width: 0%;
     left: 0;
     background-color: #4BD6B8;
-    bottom: -1.7rem;
+    bottom: -1.5rem;
     transition: 0.3s;
 }
 a:hover:after{
@@ -74,25 +86,31 @@ a:hover:after{
 
 .nav-drop-div {
     position: absolute;
+    height: 15rem;
+    left: 0;
     width: 100%;
-    height: 20vh;
-    left: -25rem;
     padding-top: 1.3rem;
     display: none;
     
 }
 
 .navbar-dropdown {
+    position: absolute;
     display: flex;
     list-style: none;
-    position: relative;
-    left: 9rem;
-    margin-top: 1rem;
+    left: 0;
+    margin-top: 0.2rem;
+    height: 15rem;
+    width: 100%;
+}
+
+.drop-background{
     width: 100%;
     height: 15rem;
-    background-color: rgba(255, 255, 255, 0.7); 
-    
-
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top:5rem;
+    display: none;
 }
 
 .navbar-drop-link img {
@@ -102,7 +120,7 @@ a:hover:after{
 
 .navbar-drop-link {
     margin-top: 2rem;
-    margin-left: 5rem;
+    margin-left: 12rem;
     text-align: center;
     
     
@@ -117,14 +135,15 @@ a:hover:after{
     
 }
 
-.navbar-list li:hover .nav-drop-div{
+.navbar-list li:hover .nav-drop-div {
   display: block;
 }
+  
 
 .drop-details{
     display: flex;
-    margin-left: 23rem;
     
+
     
 }
 
@@ -229,17 +248,20 @@ a:hover:after{
         justify-content: left;
         transform: translateX(-100%);
         transition: all 0.5s linear;
+        height: 100vh;
     }
 
     .navbar-list {
+        position: absolute;
         flex-direction: column;
-        margin-top: 6rem;
+        top:5rem;
         margin-left: 2rem;
     }
 
     .navbar-link:link,
     .navbar-link:visited {
         color: rgb(0, 0, 0);
+        position: relative;
     }
 
     .active .navbar {
@@ -248,11 +270,16 @@ a:hover:after{
 
     .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"] {
         display: block;
+        visibility: visible;
+        opacity: 1;
+        
 
     }
 
     .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"] {
         display: none;
+        visibility: hidden;
+        opacity: 0;
 
     }
 
@@ -270,7 +297,7 @@ a:hover:after{
     .drop-details{
         display: flex;
         flex-direction: column;
-        margin-left: 38rem;
+        margin-left: 12rem;
     }
 
     .navbar-drop-link{
@@ -284,7 +311,7 @@ a:hover:after{
 
     .navbar-dropdown {
         position: absolute;
-        margin-left: 0;
+        margin-left: 10rem;
     }
 
     .drop-details li h4{

@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const close_icon = document.getElementById('close-icon');
     const search_box = document.getElementById('searching-box');
     const tri_white = document.getElementById('tri-white');
+    const drop_back = document.querySelector('.drop-background');
     var isOpen = 0
 
     mobile_nav.addEventListener('click', function () {
@@ -29,14 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     products.addEventListener('mouseover', function () {
         nav_drop_div.style.display = "block";
+        drop_back.style.display = "block";
     })
 
     products.addEventListener('mouseout', function () {
         nav_drop_div.style.display = "none";
+        drop_back.style.display = "none";
     })
 
     header.addEventListener('mouseover', function () {
-        header.style.backgroundColor = "#FFFFFF"
+        header.style.backgroundColor = "rgba(255, 255, 255, 0.9)"
         tri_white.style.display = "none";
         for (let i = 0; i < navbar_link.length; i++) {
             navbar_link[i].style.color = "#656565";
