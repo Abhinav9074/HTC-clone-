@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const search_box = document.getElementById('searching-box');
     const tri_white = document.getElementById('tri-white');
     const drop_back = document.querySelector('.drop-background');
+    const search_back = document.querySelector('.search-background');
     var isOpen = 0
 
     mobile_nav.addEventListener('click', function () {
@@ -49,27 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
             icon[j].style.color = "#656565";
         }
 
-        
+
     })
 
     header.addEventListener('mouseout', function () {
-        if(isOpen==0){
+        if (isOpen == 0) {
             header.style.backgroundColor = "rgba(0, 0, 0, .5)"
             tri_white.style.display = "block";
-        
-        for (let i = 0; i < navbar_link.length; i++) {
-            navbar_link[i].style.color = "#FFFFFF";
-        }
 
-        for (let j = 0; j < icon.length; j++) {
-            icon[j].style.color = "#FFFFFF";
+            for (let i = 0; i < navbar_link.length; i++) {
+                navbar_link[i].style.color = "#FFFFFF";
+            }
+
+            for (let j = 0; j < icon.length; j++) {
+                icon[j].style.color = "#FFFFFF";
+            }
         }
-    }
     })
 
     search_icon.addEventListener('click', function () {
         search_box.style.display = "block"
         close_icon.style.display = "block"
+        search_back.style.display = "block"
         isOpen = 1
         console.log(isOpen)
 
@@ -80,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         search_box.value = ""
         search_box.style.display = "none"
         close_icon.style.display = "none"
+        search_back.style.display = "none"
         isOpen = 0
     })
 
