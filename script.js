@@ -87,6 +87,51 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 
+    /* Slider JS  */
+
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const dotsContainer = document.querySelector('.slider-dots');
+    const slides = document.querySelectorAll('.slider');
+    let currentSlide = 0;
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateActiveDot();
+    }
+
+    function previousSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+      updateActiveDot();
+    }
+
+    function updateActiveDot() {
+      const dots = document.querySelectorAll('.slider-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    // Create progress dots
+    for (let i = 0; i < slides.length; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('slider-dot');
+      dot.addEventListener('click', () => {
+        currentSlide = i;
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateActiveDot();
+      });
+      dotsContainer.appendChild(dot);
+    }
+
+    updateActiveDot();
+
+    /* Slider JS END  */
+
+
 
 
 });
