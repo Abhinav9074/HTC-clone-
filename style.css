@@ -775,18 +775,24 @@ a:hover:after {
         }
 
         .hover-div {
-            display: block;
+            display: flex;
+            flex-direction: column;
             margin-top: -4rem;
+            height: 100%;
+            margin-bottom: 5rem;
+            position: relative;
         }
 
         .first-container {
-            height: 185vh;
+            height: max-content;
+            position: relative;
         }
 
         .second-container {
             width: 100%;
             background-position: center;
             height: 65vh;
+            position: relative;
         }
 
         .fa-solid {
@@ -933,5 +939,3 @@ a:hover:after {
 
 
     }
-
-    
