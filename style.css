@@ -236,6 +236,10 @@ a:hover:after {
     z-index: 0;
 }
 
+.phone-slide{
+    display: none;
+}
+
 .slider-wrapper {
     min-width: 100%;
     height: 100%;
@@ -760,6 +764,14 @@ a:hover:after {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .pc-slide{
+            display: none;
+        }
+
+        .phone-slide{
+            display: block;
         }
 
         .hover-div {
