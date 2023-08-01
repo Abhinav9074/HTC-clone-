@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const tri_white = document.getElementById('tri-white');
     const drop_back = document.querySelector('.drop-background');
     const search_back = document.querySelector('.search-background');
+    const video_button = document.getElementById('watch');
+    const video_player = document.getElementsByClassName('frame-video')[0]
+    const x_button = document.getElementById('x-button');
+    const prodId = document.getElementById('prodId')
+    const sitesId = document.getElementById('sitesId')
+    const supportId = document.getElementById('supportId')
+    const aboutId = document.getElementById('aboutId')
+    const prodId_list = document.getElementById('prodId-list')
+    const sitesId_list = document.getElementById('sitesId-list')
+    const supportId_list = document.getElementById('supportId-list')
+    const aboutId_list = document.getElementById('aboutId-list')
     var isOpen = 0
 
     mobile_nav.addEventListener('click', function () {
@@ -85,6 +96,70 @@ document.addEventListener("DOMContentLoaded", function () {
         search_back.style.display = "none"
         isOpen = 0
     })
+
+    video_button.addEventListener('click', function () {
+        video_player.style.display = "block"
+        x_button.style.display = "block"
+    })
+
+    x_button.addEventListener('click', function () {
+        video_player.style.display = "none"
+        x_button.style.display = "none"
+    })
+
+
+    prodId.addEventListener('click', function () {
+
+
+        const currentDisplayStyle1 = window.getComputedStyle(prodId_list).display;
+        if(currentDisplayStyle1 == "none"){
+            prodId_list.style.display = "block"
+        }else{
+            prodId_list.style.display = "none"
+        }
+
+    })
+
+    sitesId.addEventListener('click', function () {
+
+        const currentDisplayStyle2 = window.getComputedStyle(sitesId_list).display;
+        if(currentDisplayStyle2 == "none"){
+            sitesId_list.style.display = "block"
+        }else{
+            sitesId_list.style.display = "none"
+        }
+        
+    })
+
+    supportId.addEventListener('click', function () {
+
+        const currentDisplayStyle3 = window.getComputedStyle(supportId_list).display;
+        if(currentDisplayStyle3 == "none"){
+            supportId_list.style.display = "block"
+        }else{
+            supportId_list.style.display = "none"
+        }
+        
+    })
+
+    aboutId.addEventListener('click', function () {
+
+        const currentDisplayStyle4 = window.getComputedStyle(aboutId_list).display;
+        if(currentDisplayStyle4 == "none"){
+            aboutId_list.style.display = "block"
+        }else{
+            aboutId_list.style.display = "none"
+        }
+        
+    })
+
+
+
+
+
+
+
+
 
 
     /* Slider JS  */
